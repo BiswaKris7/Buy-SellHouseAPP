@@ -1,0 +1,114 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    android:padding="16dp">
+
+    <!-- Background Image -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background3"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <!-- Semi-transparent black overlay -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#88000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What would you like to do?"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        android:layout_marginTop="32dp" />
+
+    <!-- Subtitle Text -->
+    <TextView
+        android:id="@+id/subtitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get started on your home hunt."
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        android:layout_marginTop="8dp" />
+
+    <!-- Buy Home Button -->
+    <Button
+        android:id="@+id/buyHomeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#66000000"
+        android:text="BUY A HOME"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/subtitleTextView"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- Sell Home Button -->
+    <Button
+        android:id="@+id/sellHomeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#66000000"
+        android:text="SELL MY HOME"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/buyHomeButton"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:backgroundTint="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@id/sellHomeButton"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

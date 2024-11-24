@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ListProperty">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#1C1C1C">
+
+        <!-- Title Section -->
+        <TextView
+            android:id="@+id/form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Listing Form"
+            android:textColor="#F5F5F5"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Property Address Section -->
+        <TextView
+            android:id="@+id/property_address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Property Address"
+            android:textColor="#FF6F00"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/form_title"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/streetAddressInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Street Address"
+            android:backgroundTint="#FF6F00"
+            android:inputType="textMultiLine"
+            android:textColorHint="#E0E0E0"
+            android:textColor="#E0E0E0"
+            app:layout_constraintTop_toBottomOf="@id/property_address_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Number of Beds Section -->
+        <TextView
+            android:id="@+id/NumBeds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Number Of Beds"
+            android:textColor="#FF6F00"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/streetAddressInput"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/bedsInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="#Beds"
+            android:backgroundTint="#FF6F00"
+            android:textColorHint="#E0E0E0"
+            android:textColor="#E0E0E0"
+            app:layout_constraintTop_toBottomOf="@id/NumBeds"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Number of Baths Section -->
+        <TextView
+            android:id="@+id/NumBaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Number Of Bath"
+            android:textColor="#FF6F00"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/bedsInput"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/bathInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="#Bath"
+            android:backgroundTint="#FF6F00"
+            android:textColorHint="#E0E0E0"
+            android:textColor="#E0E0E0"
+            app:layout_constraintTop_toBottomOf="@id/NumBaths"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Property Type Section -->
+        <TextView
+            android:id="@+id/property_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Property Type"
+            android:textColor="#FF6F00"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/bathInput"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/PropertyTypeInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FF6F00"
+            android:hint="Residential, Commercial, Other"
+            android:textColor="#E0E0E0"
+            android:textColorHint="#E0E0E0"
+            app:layout_constraintTop_toBottomOf="@id/property_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Square Feet Section -->
+        <TextView
+            android:id="@+id/squareFeet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Square Feet"
+            android:textColor="#FF6F00"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/PropertyTypeInput"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/SquareFeetInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Square Feet"
+            android:backgroundTint="#FF6F00"
+            android:textColor="#E0E0E0"
+            app:layout_constraintTop_toBottomOf="@id/squareFeet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Asking Price Section -->
+        <TextView
+            android:id="@+id/AskingPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Asking Price"
+            android:textColor="#FF6F00"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/SquareFeetInput"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/AskingPriceInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Asking Price"
+            android:backgroundTint="#FF6F00"
+            android:textColor="#E0E0E0"
+            app:layout_constraintTop_toBottomOf="@id/AskingPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Property Image Upload Section -->
+        <TextView
+            android:id="@+id/property_image_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Upload Property Image"
+            android:textColor="#FF6F00"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/AskingPriceInput"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/propertyImageView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:background="#333333"
+            android:contentDescription="Property Image Preview"
+            app:layout_constraintTop_toBottomOf="@id/property_image_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/uploadImageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#FF6F00"
+            android:padding="12dp"
+            android:text="Upload Image"
+            app:layout_constraintTop_toBottomOf="@id/propertyImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#FF6F00"
+            android:padding="16dp"
+            android:text="Submit Listing"
+            app:layout_constraintTop_toBottomOf="@id/uploadImageButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
